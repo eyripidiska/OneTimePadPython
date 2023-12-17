@@ -47,8 +47,6 @@ def decrypt(cipher, key):
     for _ in range(remain_length):
         print("********", end=" ")
 
-    return ascii_string
-
 
 def print_bytes(bytes_to_print):
     for b in bytes_to_print:
@@ -114,8 +112,6 @@ print_bytes(c2)
 print("Binary Representation Key: ")
 key = get_key(message1_to_bytes, c1, max(len(c1), len(c2)))
 
-message2 = decrypt(c2, key)
-
-message2_to_bytes = bytes(message2, 'ascii')
+decrypt(c2, key)
 
 print("\n")
